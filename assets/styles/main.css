@@ -1,7 +1,106 @@
+/* Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap');
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body, input {
+    font-family: 'Poppins', 'Lato', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    width: 125rem;
+    height: 125rem;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe)
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.get-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    overflow: hidden; 
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #444444;
+    margin-bottom: .625rem;
+    text-transform: uppercase;
+}
+
+.input-field {
+    max-width: 23.75rem;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #f0f0f0;
+    border-radius: 3.5rem;
+    display: grid;
+    grid-template-columns: 15% 14% 1fr;
+    padding: 0 .5rem;
+    margin-bottom: 0.625rem;
+}
+
+.material-symbols-outlined {
+    text-align: center;
+    line-height: 3.5rem;
+    color: #acacac;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.input-field input::placeholder {
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.btn {
+    width: 9.375rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    background-color: #5995fd;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #4d84e2;
 }
