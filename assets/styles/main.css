@@ -377,3 +377,23 @@ body, input {
         left: 50%;
     }
 }
+
+@media screen and (max-width: 35.625rem) {
+    .container{
+        min-width: 25rem;
+        min-height: 100vh;
+    }
+
+    .show-network,
+    .get-number {
+        padding: 0 1.5rem;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .panel .welcome {
+        padding: .5rem 1rem;
+    }
+}
