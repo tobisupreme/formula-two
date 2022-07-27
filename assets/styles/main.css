@@ -28,9 +28,10 @@ body, input {
     height: 125rem;
     border-radius: 50%;
     background: linear-gradient(-45deg, #4481eb, #04befe);
-    top: 20%;
-    right: 48%;
+    top: 5%;
+    right: 50%;
     transform: translateY(-50%);
+    z-index: 6;
 }
 
 .top-wrapper {
@@ -49,6 +50,7 @@ body, input {
     width: 50%;
     display: grid;
     grid-template-columns: 1fr;
+    z-index: 5;
 }
 
 .show-network,
@@ -139,36 +141,59 @@ body, input {
     left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* background-color: rgb(198, 138, 138); */
 }
 
 .panel {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
     text-align: center;
+    z-index: 7;
 }
 
 .panel-left {
     padding: 3rem 17% 2rem 12%;
+    pointer-events: all;
 }
 
-.result {
+.welcome {
     color: #ffffff;
 }
 
-.result-title {
-    font-size: 1.5rem;
+.welcome-title {
+    font-weight: 700;
+    line-height: 1;
+    font-size: 2.6rem;
     text-transform: uppercase;
 }
 
-.result-text {
+.welcome-text {
     font-size: 0.95rem;
     padding: 0.7rem 0;
 }
 
+.btn.try-now {
+    margin: 0;
+    background: none;
+    border: .0625rem solid #ffffff;
+    width: 8rem;
+    height: 2.5rem;
+    font-weight: 600;
+    font-size: .8rem;
+
+    transition: .3s;
+}
+
+.btn.try-now:hover {
+    background: white;
+    color: #4481eb;
+}
+
 .panel-right {
     padding: 3rem 12% 2rem 17%;
+    pointer-events: none;
 }
 
 .logo {
@@ -185,4 +210,8 @@ body, input {
 
 .image {
     width: 100%;
+}
+
+.panel-right .welcome, .panel-right .image {
+    transform: translateX(50rem);
 }
