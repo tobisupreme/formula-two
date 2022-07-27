@@ -65,7 +65,7 @@ body, input {
     overflow: hidden; 
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    transition: 1s 0.8s ease-in-out;
+    transition: .6s 0.8s ease-in-out;
 }
 
 .get-number {
@@ -82,7 +82,6 @@ body, input {
     line-height: 2;
     color: #444444;
     margin-bottom: .625rem;
-    /* text-transform: uppercase; */
 }
 
 .input-field {
@@ -95,6 +94,10 @@ body, input {
     grid-template-columns: 15% 14% 1fr;
     padding: 0 .5rem;
     margin-bottom: 0.625rem;
+}
+
+#ccode {
+    min-width: max-content;
 }
 
 .material-symbols-outlined {
@@ -144,7 +147,7 @@ body, input {
     left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* background-color: rgb(198, 138, 138); */
+    /* background-color: rgb(249, 241, 241); */
 }
 
 .panel {
@@ -201,7 +204,7 @@ body, input {
 }
 
 .logo {
-    max-height: 100%;
+    max-width: 100%;
 }
 .logo-container {
     display: flex;
@@ -209,7 +212,7 @@ body, input {
     align-items: center;
     height: 16rem;
     max-width: 16rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .image {
