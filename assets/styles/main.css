@@ -27,10 +27,13 @@ body, input {
     width: 125rem;
     height: 125rem;
     border-radius: 50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe)
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: 20%;
+    right: 48%;
+    transform: translateY(-50%);
 }
 
-.form-container {
+.top-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -38,6 +41,17 @@ body, input {
     left: 0;
 }
 
+.top-container {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.show-network,
 .get-number {
     display: flex;
     flex-direction: column;
@@ -45,13 +59,25 @@ body, input {
     justify-content: center;
     padding: 0 5rem;
     overflow: hidden; 
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
-.title {
-    font-size: 2.2rem;
+.get-number {
+    z-index: 2;
+}
+
+.show-network {
+    z-index: 1;
+    opacity: 0;
+}
+
+.form-headline {
+    font-size: 1.2rem;
+    line-height: 2;
     color: #444444;
     margin-bottom: .625rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .input-field {
@@ -103,4 +129,60 @@ body, input {
 
 .btn:hover {
     background-color: #4d84e2;
+}
+
+.panels-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.panel-left {
+    padding: 3rem 17% 2rem 12%;
+}
+
+.result {
+    color: #ffffff;
+}
+
+.result-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.result-text {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.panel-right {
+    padding: 3rem 12% 2rem 17%;
+}
+
+.logo {
+    max-height: 100%;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    max-width: 16rem;
+    border: 1px solid red;
+}
+
+.image {
+    width: 100%;
 }
