@@ -1,8 +1,7 @@
 // get dom elements for manipulation
 const searchBtn = document.querySelector("#search-button");
-const tryNow = document.querySelector(".try-now");
-const tryAgainBtn = document.querySelector(".try-again");
-
+const tryNow = document.querySelector(".now");
+const tryAgainBtn = document.querySelector(".again");
 const container = document.querySelector(".container");
 
 // add event listeners
