@@ -36,7 +36,14 @@ This responsive web form can be viewed [here](https://tobisupreme.github.io/form
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [JavaScript](https://www.javascript.com/)
 
+## Future Optimizations:
+
+- Improve error view
+- Make responsive
+- Change color scheme, maybe
+
+
 ## Contact
 
-- [tobisupreme](https://github.com/tobisupreme) on GitHub 
+- [tobisupreme](https://github.com/tobisupreme) on GitHub
 - Reach me on Twitter: [@tobisupreme](https://twitter.com/tobisupreme)
