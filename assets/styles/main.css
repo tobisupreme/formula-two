@@ -13,6 +13,10 @@ body, input {
     font-family: 'Poppins', 'Lato', sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     position: relative;
     width: 100%;
