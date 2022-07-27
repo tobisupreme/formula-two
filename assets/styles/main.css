@@ -147,7 +147,6 @@ body, input {
     left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* background-color: rgb(249, 241, 241); */
 }
 
 .panel {
@@ -217,7 +216,7 @@ body, input {
 }
 
 .panel-right {
-    padding: 3rem 12% 2rem 17%;
+    padding: 3rem 17% 3rem 17%;
     pointer-events: none;
 }
 
@@ -371,11 +370,12 @@ body, input {
 }
 
 @media screen and (max-width: 35.625rem) {
-    /* .container{
-        min-width: 25rem;
-        min-height: 100vh;
-    } */
-
+    .container {
+        height: 100vh;
+    }
+    .panels-container {
+        grid-template-rows: 40% 20% 40%;
+    }
     .show-network,
     .get-number {
         padding: 0 1.5rem;
