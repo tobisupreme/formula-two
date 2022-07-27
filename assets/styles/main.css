@@ -90,7 +90,6 @@ body, input {
 
 .input-field {
     max-width: 15.625rem;
-    width: min-content;
     height: 3.5rem;
     background-color: #f0f0f0;
     border-radius: 3.5rem;
@@ -98,10 +97,6 @@ body, input {
     grid-template-columns: 15% 20% 65%;
     padding: 0 .5rem;
     margin-bottom: 0.625rem;
-}
-
-#ccode {
-    min-width: max-content;
 }
 
 .material-symbols-outlined {
@@ -119,7 +114,6 @@ body, input {
     font-weight: 600;
     font-size: 1.1rem;
     color: #333333;
-    width: max-content;
 }
 
 .input-field input::placeholder {
@@ -166,7 +160,7 @@ body, input {
 }
 
 .panel-left {
-    padding: 3rem 17% 2rem 12%;
+    padding: 3rem 17% 3rem 17%;
     pointer-events: all;
 }
 
@@ -177,7 +171,6 @@ body, input {
 
 .welcome-title {
     font-weight: 700;
-    line-height: 1;
     font-size: 2.6rem;
     text-transform: uppercase;
 }
@@ -202,7 +195,7 @@ body, input {
 }
 
 .welcome-text {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     padding: 0.7rem 0;
 }
 
@@ -326,7 +319,6 @@ body, input {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 2.5rem 8%;
     }
 
     .panel-left {
@@ -379,10 +371,10 @@ body, input {
 }
 
 @media screen and (max-width: 35.625rem) {
-    .container{
+    /* .container{
         min-width: 25rem;
         min-height: 100vh;
-    }
+    } */
 
     .show-network,
     .get-number {
