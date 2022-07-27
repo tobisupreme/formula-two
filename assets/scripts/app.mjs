@@ -1,7 +1,12 @@
 import { getNetworkOperators, getGreetings } from "./data.mjs";
 
+function startApp() {
+  console.log("..running");
+  showLogo();
+};
+
 // show network operator logo of user's phone number
-export function showLogo() {
+function showLogo() {
   // Get object of network operators
   const networkOperators = getNetworkOperators();
 
@@ -64,15 +69,26 @@ export function showLogo() {
   }
 
   function updateHeadline(network) {
+    const greetings = getGreetings();
+    // get random greeting
+    let greeting = () => {
+      let random = Math.floor(Math.random() * greetings.length);
+      return greetings[random];
+    };
     // get the headline text elements
     let title = document.querySelector(".result-title");
     let headline = document.querySelector(".result-headline");
     if (network) {
-      title.textContent = "Yes!";
+      title.textContent = greeting();
       headline.textContent = `Your service provider is ${network}`;
     } else {
-      headline.textContent = `Sorry, we couldn't find your service provider.`;
       title.textContent = `OOPS!`;
+      headline.textContent = `Sorry, we couldn't find your service provider.`;
     }
   }
 }
+
+// ======= DO NOT EDIT ============== //
+export default startApp;
+// ======= EEND DO NOT EDIT ========= //
+  

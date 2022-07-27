@@ -1,6 +1,6 @@
-import { showLogo } from "./app.mjs";
+import startApp from "./app.mjs";
 
-document.addEventListener('DOMContentLoaded', showLogo);
+document.addEventListener('DOMContentLoaded', startApp);
 
 // get dom elements for manipulation
 const searchBtn = document.querySelector("#search-button");
