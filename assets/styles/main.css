@@ -180,6 +180,24 @@ body, input {
     text-transform: uppercase;
 }
 
+.result-title, 
+.result-headline {
+    font-family: 'Lato', sans-serif;
+    color: #444444;
+}
+
+.result-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 2;
+}
+
+.result-headline {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
 .welcome-text {
     font-size: 0.95rem;
     padding: 0.7rem 0;
@@ -216,7 +234,7 @@ body, input {
     align-items: center;
     height: 16rem;
     max-width: 16rem;
-    /* border: 1px solid red; */
+    padding: 1rem;
 }
 
 .image {
