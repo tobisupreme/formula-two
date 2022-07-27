@@ -82,10 +82,11 @@ body, input {
 }
 
 .form-headline {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 2;
     color: #444444;
     margin-bottom: .625rem;
+    text-align: center;
 }
 
 .input-field {
@@ -164,14 +165,28 @@ body, input {
 }
 
 .welcome {
-    color: #ffffff;
+    color: #fef4f4;
     transition: .9s .6s ease-in-out;
 }
 
 .welcome-title {
-    font-weight: 700;
-    font-size: 2.6rem;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.625rem;
+    letter-spacing: .3rem;
     text-transform: uppercase;
+}
+
+.welcome-text {
+    font-size: 1.4rem;
+    line-height: 2.75rem;
+    margin-bottom: 1.1rem;
+    font-weight: 600;
+}
+
+.welcome span {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .result-title, 
@@ -191,11 +206,6 @@ body, input {
 .result-headline {
     font-size: 1.4rem;
     line-height: 1.5;
-}
-
-.welcome-text {
-    font-size: 1.5rem;
-    padding: 0.7rem 0;
 }
 
 .btn.try {
