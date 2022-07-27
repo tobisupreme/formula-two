@@ -373,9 +373,15 @@ body, input {
     .container {
         height: 100vh;
     }
+
+    .top-container {
+        height: 30vh;
+    }
+
     .panels-container {
         grid-template-rows: 40% 20% 40%;
     }
+    
     .show-network,
     .get-number {
         padding: 0 1.5rem;
