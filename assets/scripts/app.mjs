@@ -34,13 +34,17 @@ function showLogo() {
       logo.src = `./assets/img/logo/${networkName.toLowerCase()}.png`;
       logo.classList.remove("hidden");
     } else {
-      // if network name is not found, display nothing
-      logo.classList.add("hidden");
+      // if network name is not found, display error image
+      logo.src = `./assets/img/not-found.svg`;
     }
   }
 
   // Function to search network operator prefixes for a match with the value from input field
   function getMatchingNetworkOperator(phoneNum) {
+    if (!phoneNum.startsWith('0')) {
+        phoneNum = '0' + phoneNum;
+    }
+
     // variable to hold matching network operator if found
     let matchingNetworkOperator = "";
 
