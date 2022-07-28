@@ -1,4 +1,4 @@
-import startApp from "./app.mjs";
+import startApp, { formatNum } from "./app.mjs";
 
 document.addEventListener('DOMContentLoaded', startApp);
 
@@ -7,11 +7,15 @@ const searchBtn = document.querySelector("#search-button");
 const tryNow = document.querySelector(".now");
 const tryAgainBtn = document.querySelector(".again");
 const container = document.querySelector(".container");
+const inputField = document.getElementById('phone');
 
 // set focus to input field on click
 tryNow.addEventListener('click', () => {
-  document.getElementById('phone').focus();
+  inputField.focus();
 })
+
+// format phone number in input field
+inputField.addEventListener('keydown', formatNum)
 
 // add event listeners
 searchBtn.addEventListener("click", (x) => {

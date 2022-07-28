@@ -10,7 +10,7 @@
 }
 
 body, input {
-    font-family: 'Poppins', 'Lato', sans-serif;
+    font-family: system-ui, 'Poppins', 'Lato', sans-serif;
 }
 
 .hidden {
@@ -126,7 +126,8 @@ body, input {
     padding-left: .25rem;
 }
 
-.btn {
+#search-button {
+    font-size: 1rem;
     width: 9.375rem;
     height: 3rem;
     border: none;
@@ -175,21 +176,22 @@ body, input {
 
 .welcome-title {
     font-weight: bold;
-    font-size: 2.4rem;
-    line-height: 2.625rem;
-    letter-spacing: .3rem;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .welcome-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 1.1rem;
     font-weight: 600;
 }
 
 .welcome span {
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .result-title, 
@@ -200,27 +202,32 @@ body, input {
 }
 
 .result-title {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 2;
+    font-size: 1.75rem;
+    letter-spacing: .125rem;
+    margin-bottom: .5rem;
 }
 
-.result-headline {
-    font-size: 1.4rem;
+.result-headline, .two {
+    font-size: 1.2rem;
     line-height: 1.5;
+    padding: 0 5rem;
+    margin-bottom: .5rem;
 }
 
 .btn.try {
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
     margin: 0;
     background: none;
     border: .0625rem solid #ffffff;
-    width: 8rem;
-    height: 2.5rem;
+    height: 3rem;
     font-weight: bold;
-    font-size: .8rem;
-
     transition: .3s;
+    border-radius: 3rem;
+    padding: 0 1.5rem;
 }
 
 .btn.try:hover {
@@ -240,8 +247,9 @@ body, input {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 16rem;
-    max-width: 16rem;
+    /* height: 16rem;
+    max-width: 16rem; */
+    width: 8rem;
     padding: 1rem;
 }
 

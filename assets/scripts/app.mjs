@@ -3,7 +3,7 @@ import { getNetworkOperators, getGreetings } from "./data.mjs";
 function startApp() {
   console.log("..running");
   showLogo();
-};
+}
 
 // show network operator logo of user's phone number
 function showLogo() {
@@ -27,7 +27,7 @@ function showLogo() {
     let logo = document.querySelector(".logo");
 
     // update headline
-    updateHeadline(networkName);
+    updateHeadline(networkName, phoneNum);
 
     if (networkName) {
       // if network name is a match, display the corresponding logo
@@ -41,8 +41,9 @@ function showLogo() {
 
   // Function to search network operator prefixes for a match with the value from input field
   function getMatchingNetworkOperator(phoneNum) {
-    if (!phoneNum.startsWith('0')) {
-        phoneNum = '0' + phoneNum;
+    if (!phoneNum.startsWith("0")) {
+      phoneNum = "0" + phoneNum;
+      // phoneNum = num.replace(/[^\d]/g, "")
     }
 
     // variable to hold matching network operator if found
@@ -72,7 +73,15 @@ function showLogo() {
     return matchingNetworkOperator;
   }
 
-  function updateHeadline(network) {
+  function updateHeadline(network, num) {
+    if (!num.startsWith("0")) {
+      num = num.replace(/[^\d]/g, "");
+      num = `0${num.slice(0, 3)} ${num.slice(3, 6)} ${num.slice(6)}`;
+    } else {
+      num = num.replace(/[^\d]/g, "");
+      num = `${num.slice(0, 4)} ${num.slice(4, 7)} ${num.slice(7)}`;
+    }
+
     const greetings = getGreetings();
     // get random greeting
     let greeting = () => {
@@ -82,9 +91,11 @@ function showLogo() {
     // get the headline text elements
     let title = document.querySelector(".result-title");
     let headline = document.querySelector(".result-headline");
+    let two = document.querySelector(".two");
     if (network) {
       title.textContent = greeting();
-      headline.textContent = `Your service provider is ${network}`;
+      headline.textContent = `We scanned through the database and are pleased to inform you that we found it!`;
+      two.textContent = `${num} is subscribed to ${network}'s network.`;
     } else {
       title.textContent = `OOPS!`;
       headline.textContent = `Sorry, we couldn't find your service provider.`;
@@ -92,7 +103,23 @@ function showLogo() {
   }
 }
 
+// format phone number in input field
+export function formatNum() {
+  const inputField = document.getElementById("phone");
+
+  const formattedValue = formatNumValue(inputField.value);
+
+  inputField.value = formattedValue;
+}
+
+function formatNumValue(num) {
+  if (!num) return num;
+
+  // remove non digits from inputted number
+  const phoneNum = num.replace(/[^\d]/g, "");
+
+  return phoneNum;
+}
 // ======= DO NOT EDIT ============== //
 export default startApp;
 // ======= EEND DO NOT EDIT ========= //
-  
