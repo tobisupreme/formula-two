@@ -179,7 +179,6 @@ body, input {
 
 .welcome-text {
     font-size: 1.4rem;
-    line-height: 2.75rem;
     margin-bottom: 1.1rem;
     font-weight: 600;
 }
@@ -290,118 +289,9 @@ body, input {
 }
 
 @media screen and (max-width: 54.375rem) {
-    .container {
-        min-height: 50rem;
-        height: 100vh;
-    }
 
-    .container:before {
-        width: 93.75rem;
-        height: 93.75rem;
-        left: 30%;
-        bottom: 54%;
-        transform: translateX(-50%);
-        right: initial;
-        top: initial;
-        transition: 2s ease-in-out;
-    }
-
-    .top-container {
-        width: 100%;
-        left: 50%;
-        top: 95%;
-        transform: translate(-50%, -100%);
-        transition: 1s .8s ease-in-out;
-    }
-
-    .panels-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-
-    .image {
-        width: 12.5rem;
-        transition: .9s .8s ease-in-out;
-    }
-    
-    .panel {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .panel-left {
-        grid-row: 1 / 2;
-    }
-
-    .panel-right {
-        grid-row: 3 / 4;
-    }
-
-    .panel-right .welcome, .panel-right .image {
-        transform: translateY(18.75rem);
-    }
-
-    .panel .welcome {
-        padding-right: 15%;
-    }
-
-    .welcome-title {
-        font-size: 1.2rem;
-    }
-
-    .welcome-text {
-        font-size: .7rem;
-        padding: 0.5rem 0;
-    }
-
-    .btn.try {
-        width: 6.875rem;
-        height: 2.1875rem;
-        font-size: .7rem;
-    }
-
-    .container.show-result-mode:before {
-        transform: translate(-50%, 100%);
-        bottom: 32%;
-        right: initial;
-    }
-
-    .container.show-result-mode .panel-left .image,
-    .container.show-result-mode .panel-left .welcome {
-        transform: translateY(-18.75rem);
-    }
-
-    .container.show-result-mode .top-container {
-        top: 5%;
-        transform: translate(-50%, 0);
-        left: 50%;
-    }
 }
 
 @media screen and (max-width: 35.625rem) {
-    .container {
-        height: 100vh;
-    }
 
-    .top-container {
-        height: 30vh;
-    }
-
-    .panels-container {
-        grid-template-rows: 40% 20% 40%;
-    }
-    
-    .show-network,
-    .get-number {
-        padding: 0 1.5rem;
-    }
-
-    .image {
-        display: none;
-    }
-
-    .panel .welcome {
-        padding: .5rem 1rem;
-    }
 }
