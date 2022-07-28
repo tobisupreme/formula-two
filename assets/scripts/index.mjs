@@ -8,6 +8,11 @@ const tryNow = document.querySelector(".now");
 const tryAgainBtn = document.querySelector(".again");
 const container = document.querySelector(".container");
 
+// set focus to input field on click
+tryNow.addEventListener('click', () => {
+  document.getElementById('phone').focus();
+})
+
 // add event listeners
 searchBtn.addEventListener("click", (x) => {
   x.preventDefault();
