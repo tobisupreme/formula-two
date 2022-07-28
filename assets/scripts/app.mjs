@@ -41,10 +41,8 @@ function showLogo() {
 
   // Function to search network operator prefixes for a match with the value from input field
   function getMatchingNetworkOperator(phoneNum) {
-    if (!phoneNum.startsWith("0")) {
+      phoneNum = phoneNum.replace(/[^\d]/g, "")
       phoneNum = "0" + phoneNum;
-      // phoneNum = num.replace(/[^\d]/g, "")
-    }
 
     // variable to hold matching network operator if found
     let matchingNetworkOperator = "";
@@ -104,7 +102,6 @@ function showLogo() {
   }
 }
 
-// format phone number in input field
 export function formatNum() {
   const inputField = document.getElementById("phone");
 
@@ -119,7 +116,29 @@ function formatNumValue(num) {
   // remove non digits from inputted number
   const phoneNum = num.replace(/[^\d]/g, "");
 
-  return phoneNum;
+  let phoneNumLength = phoneNum.length;
+
+  if (phoneNumLength < 4) {
+    return phoneNum;
+  }
+  if (phoneNum.startsWith("0") && phoneNumLength < 7) {
+    return `${phoneNum.slice(1, 2)} ${phoneNum.slice(2, 5)} ${phoneNum.slice(5)}`;
+  } 
+  if (phoneNumLength < 7) {
+    return `${phoneNum.slice(0, 2)} ${phoneNum.slice(2, 5)} ${phoneNum.slice(5)}`;
+  } 
+  if (phoneNum.startsWith("0") && phoneNumLength < 10) {
+    return `${phoneNum.slice(1, 2)} ${phoneNum.slice(2, 5)} ${phoneNum.slice(5)}`;
+  } 
+  if (phoneNumLength < 10) {
+    return `${phoneNum.slice(0, 2)} ${phoneNum.slice(2, 5)} ${phoneNum.slice(5)}`;
+  } 
+  if (phoneNum.startsWith("0") && phoneNumLength >= 10) {
+    return `${phoneNum.slice(1, 4)} ${phoneNum.slice(4, 7)} ${phoneNum.slice(7)}`;
+  } 
+  if (phoneNumLength >= 10)  {
+    return `${phoneNum.slice(0, 3)} ${phoneNum.slice(3, 6)} ${phoneNum.slice(6)}`;
+  }
 }
 // ======= DO NOT EDIT ============== //
 export default startApp;

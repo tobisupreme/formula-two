@@ -10,7 +10,8 @@
 }
 
 body, input {
-    font-family: system-ui, 'Poppins', 'Lato', sans-serif;
+    /* font-family: system-ui, 'Poppins', 'Lato', sans-serif; */
+    font-family: 'Poppins', 'Lato', sans-serif;
 }
 
 .hidden {
@@ -89,6 +90,27 @@ body, input {
     text-align: center;
 }
 
+.delete-forever-wrap {
+    cursor: pointer;
+}
+
+.delete-forever:hover {
+    border-radius: 3rem;
+    background-color: #f0f0f0;
+}
+
+.input-field-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: .625rem;
+    margin-bottom: 0.625rem;
+}
+
+#ccode {
+    /* align-self: center; */
+    justify-self: start;
+}
+
 .input-field {
     max-width: 15.625rem;
     height: 3.5rem;
@@ -97,7 +119,6 @@ body, input {
     display: grid;
     grid-template-columns: 15% 20% 65%;
     padding: 0 .5rem;
-    margin-bottom: 0.625rem;
 }
 
 .material-symbols-outlined {
@@ -214,6 +235,7 @@ body, input {
     line-height: 1.5;
     padding: 0 5rem;
     margin-bottom: .5rem;
+    max-width: 36.1875rem;
 }
 
 .btn.try {
