@@ -99,6 +99,7 @@ function showLogo() {
     } else {
       title.textContent = `OOPS!`;
       headline.textContent = `Sorry, we couldn't find your service provider.`;
+      two.textContent = "";
     }
   }
 }
