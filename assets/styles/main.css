@@ -10,8 +10,11 @@
 }
 
 body, input {
-    /* font-family: system-ui, 'Poppins', 'Lato', sans-serif; */
-    font-family: 'Poppins', 'Lato', sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Lato", "Poppins";
+
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
 }
 
 .hidden {
@@ -115,7 +118,7 @@ body, input {
     background-color: #f0f0f0;
     border-radius: 3.5rem;
     display: grid;
-    grid-template-columns: 15% 20% 65%;
+    grid-template-columns: 15% 22% 63%;
     padding: 0 .5rem;
 }
 
