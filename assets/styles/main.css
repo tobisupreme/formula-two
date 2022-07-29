@@ -432,7 +432,11 @@ body, input {
     }
 }
 
-@media screen and (max-width: 35.625rem) {
+@media screen and (max-width: 39rem) {
+    .container {
+        min-width: 23.4375rem;
+    }
+    
     .welcome-title {
         margin-bottom: .5rem;
     }
