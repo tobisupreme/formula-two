@@ -35,6 +35,7 @@ function showLogo() {
       logo.classList.remove("hidden");
     } else {
       // if network name is not found, display error image
+      logo.classList.remove("hidden");
       logo.src = `./assets/img/not-found.svg`;
     }
   }
@@ -150,6 +151,7 @@ export function clearResult() {
   title.textContent = `OOPS!`;
   headline.textContent = `Sorry, we couldn't find your service provider.`;
   two.textContent = "";
+  logo.classList.remove("hidden");
   logo.src = `./assets/img/not-found.svg`;
 }
 // ======= DO NOT EDIT ============== //
