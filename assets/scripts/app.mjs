@@ -83,17 +83,19 @@ function showLogo() {
 
     const greetings = getGreetings();
     // get random greeting
-    let greeting = () => {
-      let random = Math.floor(Math.random() * greetings.length);
+    const greeting = () => {
+      const random = Math.floor(Math.random() * greetings.length);
       return greetings[random];
     };
     // get the headline text elements
-    let title = document.querySelector(".result-title");
-    let headline = document.querySelector(".result-headline");
-    let two = document.querySelector(".two");
+    let name = document.getElementById("name").value;
+    name = properCase(name);
+    const title = document.querySelector(".result-title");
+    const headline = document.querySelector(".result-headline");
+    const two = document.querySelector(".two");
     if (network) {
       title.textContent = greeting();
-      headline.textContent = `We scanned through the database and are pleased to inform you that we found it!`;
+      headline.textContent = `${name}, we scanned through the database and are pleased to inform you that we found it!`;
       two.textContent = `${num} is subscribed to ${network}'s network.`;
     } else {
       title.textContent = `OOPS!`;
@@ -142,6 +144,7 @@ function formatNumValue(num) {
   }
 }
 
+// Function to clear results
 export function clearResult() {
   const title = document.querySelector(".result-title");
   const headline = document.querySelector(".result-headline");
@@ -153,6 +156,15 @@ export function clearResult() {
   two.textContent = "";
   logo.classList.remove("hidden");
   logo.src = `./assets/img/not-found.svg`;
+}
+
+// Function to return user name in proper case
+function properCase(name) {
+  let names = name.split(" ");
+  let finalName = names.map((name) => {
+    return name[0].toUpperCase() + name.slice(1);
+  }).join(" ");
+  return finalName;
 }
 // ======= DO NOT EDIT ============== //
 export default startApp;
