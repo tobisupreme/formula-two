@@ -1,4 +1,4 @@
-import startApp, { formatNum } from "./app.mjs";
+import startApp, { formatNum, clearResult } from "./app.mjs";
 
 document.addEventListener("DOMContentLoaded", startApp);
 
@@ -13,6 +13,7 @@ const clear = document.querySelector(".delete-forever-wrap");
 // clear input field
 clear.addEventListener("click", () => {
   inputField.value = "";
+  clearResult();
   inputField.focus();
 });
 

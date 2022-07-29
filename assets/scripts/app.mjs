@@ -140,6 +140,18 @@ function formatNumValue(num) {
     return `${phoneNum.slice(0, 3)} ${phoneNum.slice(3, 6)} ${phoneNum.slice(6)}`;
   }
 }
+
+export function clearResult() {
+  const title = document.querySelector(".result-title");
+  const headline = document.querySelector(".result-headline");
+  const two = document.querySelector(".two");
+  const logo = document.querySelector(".logo");
+
+  title.textContent = `OOPS!`;
+  headline.textContent = `Sorry, we couldn't find your service provider.`;
+  two.textContent = "";
+  logo.src = `./assets/img/not-found.svg`;
+}
 // ======= DO NOT EDIT ============== //
 export default startApp;
 // ======= EEND DO NOT EDIT ========= //

@@ -94,9 +94,8 @@ body, input {
     cursor: pointer;
 }
 
-.delete-forever:hover {
-    border-radius: 3rem;
-    background-color: #f0f0f0;
+.delete_forever:hover {
+    color: #000000;
 }
 
 .input-field-wrap {
