@@ -88,14 +88,20 @@ function showLogo() {
       return greetings[random];
     };
     // get the headline text elements
-    let name = document.getElementById("name").value;
-    name = properCase(name);
     const title = document.querySelector(".result-title");
     const headline = document.querySelector(".result-headline");
     const two = document.querySelector(".two");
-    if (network) {
+    let nameBox = document.getElementById("name");
+
+    if (network && nameBox.value) {
+      let name = document.getElementById("name").value;
+      name = properCase(name);
       title.textContent = greeting();
       headline.textContent = `${name}, we scanned through the database and are pleased to inform you that we found it!`;
+      two.textContent = `${num} is subscribed to ${network}'s network.`;
+    } else if (network) {
+      title.textContent = greeting();
+      headline.textContent = `We scanned through the database and are pleased to inform you that we found it!`;
       two.textContent = `${num} is subscribed to ${network}'s network.`;
     } else {
       title.textContent = `OOPS!`;
