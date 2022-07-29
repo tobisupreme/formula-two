@@ -1,4 +1,4 @@
-import startApp, { formatNum, clearResult } from "./app.mjs";
+import startApp, { showMatchingServiceProvider, formatNum, clearResult } from "./app-copy.mjs";
 
 document.addEventListener("DOMContentLoaded", startApp);
 
@@ -30,6 +30,7 @@ inputField.addEventListener("input", formatNum);
 // add event listeners
 searchBtn.addEventListener("click", (x) => {
   x.preventDefault();
+  showMatchingServiceProvider();
   container.classList.add("show-result-mode");
 });
 
