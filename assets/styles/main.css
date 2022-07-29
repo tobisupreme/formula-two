@@ -422,5 +422,37 @@ body, input {
 }
 
 @media screen and (max-width: 35.625rem) {
+    .welcome-title {
+        margin-bottom: .5rem;
+    }
 
+    .welcome-text {
+        font-size: calc(1.2rem + .3vw);
+    }
+
+    .result-headline {
+        text-align: left;
+    }
+
+    .show-network, .get-number {
+        padding: 0 1.5rem;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .panel .welcome {
+        padding: .5rem 1rem;
+    }
+
+    .container::before {
+        bottom: 55%;
+        left: 50%;
+    }
+
+    .container.show-result-mode::before {
+        bottom: 45%;
+        left: 50%;
+    }
 }
