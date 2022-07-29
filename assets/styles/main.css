@@ -112,7 +112,7 @@ body, input {
 }
 
 .input-field {
-    max-width: 15.625rem;
+    max-width: 18.75rem;
     height: 3.5rem;
     background-color: #f0f0f0;
     border-radius: 3.5rem;
@@ -297,7 +297,7 @@ body, input {
 
 .container.show-result-mode .panel-right .image,
 .container.show-result-mode .panel-right .welcome {
-    transform: translateX(0px);
+    transform: translateX(0rem);
 }
 
 .container.show-result-mode .panel-left {
@@ -323,7 +323,102 @@ body, input {
 }
 
 @media screen and (max-width: 54.375rem) {
+    /* typography */
+    .welcome-title {
+        font-size: calc(1.525rem + 3.3vw);
+    }
 
+    .welcome-text {
+        font-size: calc(1.275rem + .3vw);
+    }
+
+    .result-title {
+        font-size: calc(1.3rem + .6vw);
+    }
+
+    .result-headline {
+        font-size: 1rem;
+    }
+
+    .show-network, .result-headline {
+        padding: 0 1.5rem;
+    }
+
+    /* Layout */
+    .container {
+        min-height: 50rem;
+        height: 100vh;
+    }
+
+    .container:before {
+        width: 93.75rem;
+        height: 93.75rem;
+        left: 30%;
+        bottom: 60%;
+        transform: translateX(-50%);
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+
+    .top-container {
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+        transition: 1s .8s ease-in-out;
+        height: 16rem;
+    }
+
+    .panels-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .panel-right .welcome, .panel-right .image {
+        transform: translateX(50rem);
+    }
+
+    .panel {
+        flex-direction: row;
+        padding: 2.5rem 8%;
+    }
+
+    .panel .welcome {
+        padding-right: 15%;
+        transition: .9s .6s ease-in-out;
+    }
+
+    .panel-left {
+        grid-row: 1 / 2;
+    }
+
+    .panel-right {
+        grid-row: 3 / 4;
+    }
+
+    .image {
+        width: 12.5rem;
+        transition: .9s .6s ease-in-out;
+    }
+
+    .container.show-result-mode::before {
+        transform: translate(-50%, 100%);
+        bottom: 40%;
+        right: initial;
+    }
+
+    .container.show-result-mode .panel-left .image,
+    .container.show-result-mode .panel-left .welcome {
+        transform: translateY(-18.75rem);
+    }
+
+    .container.show-result-mode .top-container {
+        top: 5%;
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 15%;
+    }
 }
 
 @media screen and (max-width: 35.625rem) {
