@@ -8,11 +8,13 @@ const tryNow = document.querySelector(".now");
 const tryAgainBtn = document.querySelector(".again");
 const container = document.querySelector(".container");
 const inputField = document.getElementById("phone");
+const inputFieldName = document.getElementById("name");
 const clear = document.querySelector(".delete-forever-wrap");
 
 // clear input field
 clear.addEventListener("click", () => {
   inputField.value = "";
+  inputFieldName.value = "";
   clearResult();
   inputField.focus();
 });
