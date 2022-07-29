@@ -1,4 +1,4 @@
-import startApp, { showMatchingServiceProvider, formatNum, clearResult } from "./app-copy.mjs";
+import startApp, { showMatchingServiceProvider, formatNum, clearResult } from "./app.mjs";
 
 document.addEventListener("DOMContentLoaded", startApp);
 
